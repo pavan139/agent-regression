@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "04",
+  "repository_name": "agent-regression",
+  "title": "Agent Regression and Mutation Testing",
+  "package": "agent_regression",
+  "focus": "Independent oracles, metamorphic testing, regression detection",
+  "layout": {
+    "docs_root": "handbook",
+    "tests_root": "checks",
+    "tools_root": "scripts",
+    "config_root": "suites",
+    "examples_root": "baselines",
+    "verifier": "scripts/check_suite.py",
+    "source_roots": [
+      "src"
+    ],
+    "documents": {
+      "architecture": "handbook/evaluation-flow.md",
+      "design": "handbook/paired-release-inference.md",
+      "review": "handbook/validator-findings.md",
+      "experiments": "handbook/fault-detection-results.md",
+      "publishing": "handbook/sharing-a-suite.md",
+      "validation": "handbook/running-the-gates.md"
+    }
+  }
+}
