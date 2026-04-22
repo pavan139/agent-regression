@@ -1,0 +1,24 @@
+{
+  "allowed_drop": 0.15,
+  "alpha": 0.05,
+  "baseline_version": "fixture-baseline-v1",
+  "bootstrap_samples": 1000,
+  "candidate_version": "fixture-candidate-v2",
+  "critical_case_ids": [
+    "release-000",
+    "release-001",
+    "release-002",
+    "release-003"
+  ],
+  "dataset_sha256": "157d38609bd263197bfd6701f739cfe7a32690191ef524f7326bf6b63c420f89",
+  "experiment_id": "synthetic-release-240-iid-v1",
+  "min_cases": 100,
+  "min_slice_cases": 40,
+  "seed": 17,
+  "slice_tags": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ]
+}
