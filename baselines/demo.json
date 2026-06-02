@@ -1,0 +1,61 @@
+{
+  "backend": "deterministic_fixture_agent",
+  "baseline": {
+    "output": {
+      "answer": "11",
+      "tool": "add",
+      "tool_call_id": "call-0"
+    },
+    "stop_reason": "completed",
+    "trace": [
+      {
+        "arguments": {
+          "left": 7,
+          "right": 4
+        },
+        "call_id": "call-0",
+        "result": "11",
+        "status": "ok",
+        "tool": "add"
+      }
+    ]
+  },
+  "baseline_failures": [],
+  "case": {
+    "case_id": "add-positive",
+    "expected_error": null,
+    "left": 7,
+    "operation": "add",
+    "prompt": "TASK: add 7 4",
+    "right": 4,
+    "tags": [
+      "add",
+      "normal"
+    ]
+  },
+  "mutant": {
+    "output": {
+      "answer": "12",
+      "tool": "add",
+      "tool_call_id": "call-0"
+    },
+    "stop_reason": "completed",
+    "trace": [
+      {
+        "arguments": {
+          "left": 8,
+          "right": 4
+        },
+        "call_id": "call-0",
+        "result": "12",
+        "status": "ok",
+        "tool": "add"
+      }
+    ]
+  },
+  "mutant_failures": [
+    "goal",
+    "tool_arguments",
+    "tool_result"
+  ]
+}

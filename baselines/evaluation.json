@@ -1,0 +1,479 @@
+{
+  "backend": "deterministic_fixture_agent",
+  "baseline": {
+    "cases": 21,
+    "failures": [],
+    "false_positives": 0,
+    "passed": 21
+  },
+  "dataset_sha256": "c6e8d5d0e839579ecfccf4b3af42de729fc463d5d6f967c82b52db12f82a5aab",
+  "gate_passed": true,
+  "limitations": [
+    "Only changed observations on passing baselines enter mutation denominators.",
+    "Mutation detection measures these known fault operators, not arbitrary agent failures.",
+    "The fixture is a deterministic program; imported trace authenticity is not attested."
+  ],
+  "metamorphic": {
+    "cases": 48,
+    "eligible_sources": 16,
+    "excluded_sources": 0,
+    "excluded_variants_due_to_input_budget": 0,
+    "failures": [],
+    "outcomes": [
+      {
+        "case_id": "add-positive/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-positive"
+      },
+      {
+        "case_id": "add-positive/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-positive"
+      },
+      {
+        "case_id": "add-positive/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-positive"
+      },
+      {
+        "case_id": "add-negative/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-negative"
+      },
+      {
+        "case_id": "add-negative/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-negative"
+      },
+      {
+        "case_id": "add-negative/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-negative"
+      },
+      {
+        "case_id": "add-zero/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-zero"
+      },
+      {
+        "case_id": "add-zero/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-zero"
+      },
+      {
+        "case_id": "add-zero/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-zero"
+      },
+      {
+        "case_id": "add-boundary/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-boundary"
+      },
+      {
+        "case_id": "add-boundary/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-boundary"
+      },
+      {
+        "case_id": "add-boundary/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "add-boundary"
+      },
+      {
+        "case_id": "subtract-positive/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-positive"
+      },
+      {
+        "case_id": "subtract-positive/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-positive"
+      },
+      {
+        "case_id": "subtract-positive/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-positive"
+      },
+      {
+        "case_id": "subtract-negative/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-negative"
+      },
+      {
+        "case_id": "subtract-negative/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-negative"
+      },
+      {
+        "case_id": "subtract-negative/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-negative"
+      },
+      {
+        "case_id": "subtract-signed/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-signed"
+      },
+      {
+        "case_id": "subtract-signed/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-signed"
+      },
+      {
+        "case_id": "subtract-signed/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-signed"
+      },
+      {
+        "case_id": "subtract-zero/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-zero"
+      },
+      {
+        "case_id": "subtract-zero/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-zero"
+      },
+      {
+        "case_id": "subtract-zero/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "subtract-zero"
+      },
+      {
+        "case_id": "multiply-positive/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-positive"
+      },
+      {
+        "case_id": "multiply-positive/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-positive"
+      },
+      {
+        "case_id": "multiply-positive/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-positive"
+      },
+      {
+        "case_id": "multiply-negative/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-negative"
+      },
+      {
+        "case_id": "multiply-negative/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-negative"
+      },
+      {
+        "case_id": "multiply-negative/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-negative"
+      },
+      {
+        "case_id": "multiply-zero/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-zero"
+      },
+      {
+        "case_id": "multiply-zero/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-zero"
+      },
+      {
+        "case_id": "multiply-zero/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-zero"
+      },
+      {
+        "case_id": "multiply-boundary/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-boundary"
+      },
+      {
+        "case_id": "multiply-boundary/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-boundary"
+      },
+      {
+        "case_id": "multiply-boundary/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "multiply-boundary"
+      },
+      {
+        "case_id": "divide-exact/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-exact"
+      },
+      {
+        "case_id": "divide-exact/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-exact"
+      },
+      {
+        "case_id": "divide-exact/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-exact"
+      },
+      {
+        "case_id": "divide-rational/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-rational"
+      },
+      {
+        "case_id": "divide-rational/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-rational"
+      },
+      {
+        "case_id": "divide-rational/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-rational"
+      },
+      {
+        "case_id": "divide-negative/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-negative"
+      },
+      {
+        "case_id": "divide-negative/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-negative"
+      },
+      {
+        "case_id": "divide-negative/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-negative"
+      },
+      {
+        "case_id": "divide-zero-numerator/notes",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-zero-numerator"
+      },
+      {
+        "case_id": "divide-zero-numerator/spacing",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-zero-numerator"
+      },
+      {
+        "case_id": "divide-zero-numerator/injection",
+        "failures": [],
+        "passed": true,
+        "relation": "equivalent_public_behavior_ignoring_call_ids",
+        "relation_holds": true,
+        "source_id": "divide-zero-numerator"
+      }
+    ],
+    "passed": 48
+  },
+  "model_evaluation": false,
+  "mutations": {
+    "corrupt_tool_result": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "duplicate_call": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "fabricated_answer": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "invalid_schema": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "loop_exhaustion": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "unauthorized_tool": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "wrong_arguments": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    },
+    "wrong_tool": {
+      "attempted": 16,
+      "detected": 16,
+      "detection_rate": 1.0,
+      "excluded_baseline_failures": 0,
+      "injected": 16,
+      "unchanged": 0
+    }
+  },
+  "provenance": "synthetic_contract_evaluation",
+  "schema_version": 2
+}
