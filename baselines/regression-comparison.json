@@ -1,0 +1,257 @@
+{
+  "baseline": {
+    "all_passed": true,
+    "case_count": 21,
+    "complete": true,
+    "dataset_sha256": "c6e8d5d0e839579ecfccf4b3af42de729fc463d5d6f967c82b52db12f82a5aab",
+    "evaluated": 21,
+    "missing_case_ids": [],
+    "outcomes": [
+      {
+        "case_id": "add-positive",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "add-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "add-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "add-boundary",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-positive",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-signed",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-positive",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-boundary",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-exact",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-rational",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-zero-numerator",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-by-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "malformed",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "oversized",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "injection",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiple-tasks",
+        "failures": [],
+        "passed": true
+      }
+    ],
+    "pass_rate": 1.0,
+    "passed": 21,
+    "provenance": "imported_replay",
+    "schema_version": 2
+  },
+  "baseline_missing": [],
+  "baseline_passed": 21,
+  "candidate": {
+    "all_passed": false,
+    "case_count": 21,
+    "complete": true,
+    "dataset_sha256": "c6e8d5d0e839579ecfccf4b3af42de729fc463d5d6f967c82b52db12f82a5aab",
+    "evaluated": 21,
+    "missing_case_ids": [],
+    "outcomes": [
+      {
+        "case_id": "add-positive",
+        "failures": [
+          "goal",
+          "tool_arguments",
+          "tool_result"
+        ],
+        "passed": false
+      },
+      {
+        "case_id": "add-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "add-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "add-boundary",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-positive",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-signed",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "subtract-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-positive",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiply-boundary",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-exact",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-rational",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-negative",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-zero-numerator",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "divide-by-zero",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "malformed",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "oversized",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "injection",
+        "failures": [],
+        "passed": true
+      },
+      {
+        "case_id": "multiple-tasks",
+        "failures": [],
+        "passed": true
+      }
+    ],
+    "pass_rate": 0.9523809523809523,
+    "passed": 20,
+    "provenance": "imported_replay",
+    "schema_version": 2
+  },
+  "candidate_missing": [],
+  "candidate_passed": 20,
+  "case_count": 21,
+  "dataset_sha256": "c6e8d5d0e839579ecfccf4b3af42de729fc463d5d6f967c82b52db12f82a5aab",
+  "gate_passed": false,
+  "provenance": "paired_replay_comparison",
+  "recovered_case_ids": [],
+  "regressed_case_ids": [
+    "add-positive"
+  ],
+  "schema_version": 1
+}
