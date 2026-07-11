@@ -1,0 +1,5276 @@
+{
+  "critical_regression": {
+    "artifact_sha256": "ab3fcd534f232e7eb00b9c214a1e4a0fe28282bf6521c1edd58654455749633b",
+    "baseline": {
+      "missing": [],
+      "passed": 213
+    },
+    "candidate": {
+      "missing": [],
+      "passed": 231
+    },
+    "critical_failed_case_ids": [
+      "release-001"
+    ],
+    "experiment_binding": {
+      "baseline_sha256": "8361188b5e357da042d1a48f00545f867e3d4396746d4301974073ff05d25ad1",
+      "candidate_sha256": "66b784c3f944fa895cd058c98f37e9877db5dcdf5e307d0496242111a418efdc",
+      "implementation": "paired-release-v1",
+      "plan": {
+        "allowed_drop": 0.15,
+        "alpha": 0.05,
+        "baseline_version": "fixture-baseline-v1",
+        "bootstrap_samples": 1000,
+        "candidate_version": "fixture-candidate-v2-criticalfault",
+        "critical_case_ids": [
+          "release-000",
+          "release-001",
+          "release-002",
+          "release-003"
+        ],
+        "dataset_sha256": "157d38609bd263197bfd6701f739cfe7a32690191ef524f7326bf6b63c420f89",
+        "experiment_id": "synthetic-release-240-iid-v1",
+        "min_cases": 100,
+        "min_slice_cases": 40,
+        "seed": 17,
+        "slice_tags": [
+          "add",
+          "subtract",
+          "multiply",
+          "divide"
+        ]
+      }
+    },
+    "gate_passed": false,
+    "gate_reasons": [
+      {
+        "case_ids": [
+          "release-001"
+        ],
+        "code": "critical_failure"
+      }
+    ],
+    "inference_scope": "Fixed preregistered comparison; no repeated-peeking or sequential validity claim.",
+    "limitations": [
+      "Case pairs must be independent sampling units; clustered/repeated trials need cluster inference.",
+      "Percentile bootstrap intervals are descriptive and can be degenerate; release gates use simultaneous finite-sample bounds.",
+      "Holm controls the declared deterioration-test family; the bound family uses a separate conservative Bonferroni construction.",
+      "Labels and system-version declarations are supplied by the experiment owner, not cryptographically attested.",
+      "Do not repeatedly inspect this fixed-sample test and claim unchanged error guarantees."
+    ],
+    "paired_cases": [
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-000",
+        "critical": true,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": false,
+        "case_id": "release-001",
+        "critical": true,
+        "delta": -1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-002",
+        "critical": true,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-003",
+        "critical": true,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-004",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-005",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-006",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-007",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-008",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-009",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-010",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-011",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-012",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-013",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-014",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-015",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-016",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-017",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-018",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-019",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-020",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-021",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-022",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-023",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-024",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-025",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-026",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-027",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-028",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-029",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-030",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-031",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-032",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-033",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-034",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-035",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-036",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-037",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-038",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-039",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-040",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-041",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-042",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-043",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-044",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-045",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-046",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-047",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-048",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-049",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-050",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-051",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-052",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-053",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-054",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-055",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-056",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-057",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-058",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-059",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-060",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-061",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-062",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-063",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-064",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-065",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-066",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-067",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-068",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-069",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-070",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-071",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-072",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-073",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-074",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-075",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-076",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-077",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-078",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-079",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-080",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-081",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-082",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-083",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-084",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-085",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-086",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-087",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-088",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-089",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-090",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-091",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-092",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-093",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-094",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-095",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-096",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-097",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-098",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-099",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-100",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-101",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-102",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-103",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-104",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-105",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-106",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-107",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-108",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-109",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-110",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-111",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-112",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-113",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-114",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-115",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-116",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-117",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-118",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-119",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-120",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-121",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-122",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-123",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-124",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-125",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-126",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-127",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-128",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-129",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-130",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-131",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-132",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-133",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-134",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-135",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-136",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-137",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-138",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-139",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-140",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-141",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-142",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-143",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-144",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-145",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-146",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-147",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-148",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-149",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-150",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-151",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-152",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-153",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-154",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-155",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-156",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-157",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-158",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-159",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-160",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-161",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-162",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-163",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-164",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-165",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-166",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-167",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-168",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-169",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-170",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-171",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-172",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-173",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-174",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-175",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-176",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-177",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-178",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-179",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-180",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-181",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-182",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-183",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-184",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-185",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-186",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-187",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-188",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-189",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-190",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-191",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-192",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-193",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-194",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-195",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-196",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-197",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-198",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-199",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-200",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-201",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-202",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-203",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-204",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-205",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-206",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-207",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-208",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-209",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-210",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-211",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-212",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-213",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-214",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-215",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-216",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-217",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-218",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-219",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-220",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-221",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-222",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-223",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-224",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-225",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-226",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-227",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-228",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-229",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-230",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-231",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-232",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-233",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-234",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-235",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-236",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-237",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-238",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-239",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      }
+    ],
+    "schema_version": 1,
+    "slices": [
+      {
+        "baseline_passed": 213,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.041666666666666664,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 6434995667226846399,
+          "upper": 0.10833333333333334
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 231,
+        "cases": 240,
+        "delta": 0.075,
+        "discordance_test": {
+          "denominator_power_two": 20,
+          "discordant_pairs": 20,
+          "exact_deterioration_numerator": "1048575",
+          "exact_two_sided_numerator": "42",
+          "p_deterioration": 0.9999990463256836,
+          "p_two_sided": 4.00543212890625e-05,
+          "recoveries": 19,
+          "regressions": 1
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 100,
+        "name": "global",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": 0.010360582053433293,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 46,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.0,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 17871059165524219076,
+          "upper": 0.13725490196078433
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 49,
+        "cases": 51,
+        "delta": 0.058823529411764705,
+        "discordance_test": {
+          "denominator_power_two": 3,
+          "discordant_pairs": 3,
+          "exact_deterioration_numerator": "8",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.25,
+          "recoveries": 3,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:add",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.09193881915230244,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 50,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.017543859649122806,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 9615420727567985402,
+          "upper": 0.17543859649122806
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 55,
+        "cases": 57,
+        "delta": 0.08771929824561403,
+        "discordance_test": {
+          "denominator_power_two": 5,
+          "discordant_pairs": 5,
+          "exact_deterioration_numerator": "32",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.0625,
+          "recoveries": 5,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:subtract",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.06934822466004155,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 60,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.014705882352941176,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 5668466808894120826,
+          "upper": 0.17647058823529413
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 66,
+        "cases": 68,
+        "delta": 0.08823529411764706,
+        "discordance_test": {
+          "denominator_power_two": 8,
+          "discordant_pairs": 8,
+          "exact_deterioration_numerator": "255",
+          "exact_two_sided_numerator": "18",
+          "p_deterioration": 0.99609375,
+          "p_two_sided": 0.0703125,
+          "recoveries": 7,
+          "regressions": 1
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:multiply",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.0733677479183876,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 57,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.015625,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 5880309201929058077,
+          "upper": 0.125
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 61,
+        "cases": 64,
+        "delta": 0.0625,
+        "discordance_test": {
+          "denominator_power_two": 4,
+          "discordant_pairs": 4,
+          "exact_deterioration_numerator": "16",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.125,
+          "recoveries": 4,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:divide",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.06875246358934055,
+        "sufficient_sample_size": true
+      }
+    ]
+  },
+  "demonstration_passed": true,
+  "model_evaluation": false,
+  "positive": {
+    "artifact_sha256": "c1208d6eb55c5a2ce0594ad53fd0b186ac288cf1a526aa8d6f4796f7c68b8b6a",
+    "baseline": {
+      "missing": [],
+      "passed": 213
+    },
+    "candidate": {
+      "missing": [],
+      "passed": 232
+    },
+    "critical_failed_case_ids": [],
+    "experiment_binding": {
+      "baseline_sha256": "8361188b5e357da042d1a48f00545f867e3d4396746d4301974073ff05d25ad1",
+      "candidate_sha256": "8adf2d0a2f491785c20b7d650e4d135708af579482d27a1104d5eb4127b3e6e6",
+      "implementation": "paired-release-v1",
+      "plan": {
+        "allowed_drop": 0.15,
+        "alpha": 0.05,
+        "baseline_version": "fixture-baseline-v1",
+        "bootstrap_samples": 1000,
+        "candidate_version": "fixture-candidate-v2",
+        "critical_case_ids": [
+          "release-000",
+          "release-001",
+          "release-002",
+          "release-003"
+        ],
+        "dataset_sha256": "157d38609bd263197bfd6701f739cfe7a32690191ef524f7326bf6b63c420f89",
+        "experiment_id": "synthetic-release-240-iid-v1",
+        "min_cases": 100,
+        "min_slice_cases": 40,
+        "seed": 17,
+        "slice_tags": [
+          "add",
+          "subtract",
+          "multiply",
+          "divide"
+        ]
+      }
+    },
+    "gate_passed": true,
+    "gate_reasons": [],
+    "inference_scope": "Fixed preregistered comparison; no repeated-peeking or sequential validity claim.",
+    "limitations": [
+      "Case pairs must be independent sampling units; clustered/repeated trials need cluster inference.",
+      "Percentile bootstrap intervals are descriptive and can be degenerate; release gates use simultaneous finite-sample bounds.",
+      "Holm controls the declared deterioration-test family; the bound family uses a separate conservative Bonferroni construction.",
+      "Labels and system-version declarations are supplied by the experiment owner, not cryptographically attested.",
+      "Do not repeatedly inspect this fixed-sample test and claim unchanged error guarantees."
+    ],
+    "paired_cases": [
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-000",
+        "critical": true,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-001",
+        "critical": true,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-002",
+        "critical": true,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-003",
+        "critical": true,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-004",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-005",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-006",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-007",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-008",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-009",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-010",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-011",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-012",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-013",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-014",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-015",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-016",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-017",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-018",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-019",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-020",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-021",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-022",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-023",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-024",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-025",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-026",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-027",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-028",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-029",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-030",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-031",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-032",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-033",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-034",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-035",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-036",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-037",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-038",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-039",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-040",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-041",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-042",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-043",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-044",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-045",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-046",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-047",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-048",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-049",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-050",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-051",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-052",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-053",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-054",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-055",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-056",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-057",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-058",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-059",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-060",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-061",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-062",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-063",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-064",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-065",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-066",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-067",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-068",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-069",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-070",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-071",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-072",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-073",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-074",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-075",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-076",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-077",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-078",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-079",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-080",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-081",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-082",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-083",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-084",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-085",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-086",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-087",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-088",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-089",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-090",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-091",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-092",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-093",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-094",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-095",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-096",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-097",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-098",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-099",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-100",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-101",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-102",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-103",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-104",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-105",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-106",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-107",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-108",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-109",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-110",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-111",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-112",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-113",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-114",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-115",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-116",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-117",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-118",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-119",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-120",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-121",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-122",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-123",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-124",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-125",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-126",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-127",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-128",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-129",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-130",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-131",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-132",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-133",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-134",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-135",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-136",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-137",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-138",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-139",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-140",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-141",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-142",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-143",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-144",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-145",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-146",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-147",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-148",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-149",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-150",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-151",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-152",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-153",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-154",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-155",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-156",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-157",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-158",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-159",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-160",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-161",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-162",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-163",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-164",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-165",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-166",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-167",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-168",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-169",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-170",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-171",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-172",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-173",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-174",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-175",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-176",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-177",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-178",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-179",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-180",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-181",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-182",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-183",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-184",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-185",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-186",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-187",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-188",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-189",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-190",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-191",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-192",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-193",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-194",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-195",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-196",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-197",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-198",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-199",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-200",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-201",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-202",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-203",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-204",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-205",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-206",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-207",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-208",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-209",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-210",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-211",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-212",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-213",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-214",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-215",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-216",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-217",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-218",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-219",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-220",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-221",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-222",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-223",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": true,
+        "case_id": "release-224",
+        "critical": false,
+        "delta": 1,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": false,
+        "candidate_passed": false,
+        "case_id": "release-225",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-226",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-227",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-228",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-229",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-230",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-231",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-232",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-233",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-234",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-235",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "divide"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-236",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-237",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "multiply"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-238",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "subtract"
+        ]
+      },
+      {
+        "baseline_passed": true,
+        "candidate_passed": true,
+        "case_id": "release-239",
+        "critical": false,
+        "delta": 0,
+        "tags": [
+          "add"
+        ]
+      }
+    ],
+    "schema_version": 1,
+    "slices": [
+      {
+        "baseline_passed": 213,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.04583333333333333,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 6434995667226846399,
+          "upper": 0.1125
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 232,
+        "cases": 240,
+        "delta": 0.07916666666666666,
+        "discordance_test": {
+          "denominator_power_two": 19,
+          "discordant_pairs": 19,
+          "exact_deterioration_numerator": "524288",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 3.814697265625e-06,
+          "recoveries": 19,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 100,
+        "name": "global",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": 0.019073600612403072,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 46,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.0,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 17871059165524219076,
+          "upper": 0.13725490196078433
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 49,
+        "cases": 51,
+        "delta": 0.058823529411764705,
+        "discordance_test": {
+          "denominator_power_two": 3,
+          "discordant_pairs": 3,
+          "exact_deterioration_numerator": "8",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.25,
+          "recoveries": 3,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:add",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.09193881915230244,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 50,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.017543859649122806,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 9615420727567985402,
+          "upper": 0.17543859649122806
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 55,
+        "cases": 57,
+        "delta": 0.08771929824561403,
+        "discordance_test": {
+          "denominator_power_two": 5,
+          "discordant_pairs": 5,
+          "exact_deterioration_numerator": "32",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.0625,
+          "recoveries": 5,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:subtract",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.06934822466004155,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 60,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.029411764705882353,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 5668466808894120826,
+          "upper": 0.19117647058823528
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 67,
+        "cases": 68,
+        "delta": 0.10294117647058823,
+        "discordance_test": {
+          "denominator_power_two": 7,
+          "discordant_pairs": 7,
+          "exact_deterioration_numerator": "128",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.015625,
+          "recoveries": 7,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:multiply",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.04408267642446334,
+        "sufficient_sample_size": true
+      },
+      {
+        "baseline_passed": 57,
+        "bootstrap_ci": {
+          "confidence_level": 0.95,
+          "degenerate_empirical_distribution": false,
+          "lower": 0.015625,
+          "method": "paired_percentile_bootstrap",
+          "pointwise_not_simultaneous": true,
+          "replicates": 1000,
+          "seed": 5880309201929058077,
+          "upper": 0.125
+        },
+        "bound_tail_alpha": 0.005,
+        "candidate_passed": 61,
+        "cases": 64,
+        "delta": 0.0625,
+        "discordance_test": {
+          "denominator_power_two": 4,
+          "discordant_pairs": 4,
+          "exact_deterioration_numerator": "16",
+          "exact_two_sided_numerator": "2",
+          "p_deterioration": 1.0,
+          "p_two_sided": 0.125,
+          "recoveries": 4,
+          "regressions": 0
+        },
+        "family_confidence_level": 0.95,
+        "holm_adjusted_p_deterioration": 1.0,
+        "minimum_cases": 40,
+        "name": "tag:divide",
+        "noninferiority_supported": true,
+        "simultaneous_bound_method": "Clopper-Pearson marginal bounds plus Bonferroni union bound",
+        "simultaneous_lower_delta_bound": -0.06875246358934055,
+        "sufficient_sample_size": true
+      }
+    ]
+  },
+  "provenance": "synthetic_fixed_sample_release_experiment"
+}
