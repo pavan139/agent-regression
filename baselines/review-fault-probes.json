@@ -1,0 +1,50 @@
+{
+  "method": "explicit_selected_source_fault_probes",
+  "baseline_passed": true,
+  "scope": "Selected behaviors edited in this review; not whole-project mutation coverage or a TestProof score.",
+  "comparison_base": "reviewed working-tree source; repository had no HEAD during the audit",
+  "total": 5,
+  "killed": 5,
+  "outcomes": [
+    {
+      "id": "trace-schema",
+      "file": "src/agent_regression/harness.py",
+      "line": 305,
+      "status": "killed",
+      "tests_run": 30,
+      "returncode": 1
+    },
+    {
+      "id": "real-duplicate-execution",
+      "file": "src/agent_regression/harness.py",
+      "line": 211,
+      "status": "killed",
+      "tests_run": 30,
+      "returncode": 1
+    },
+    {
+      "id": "mutation-denominator",
+      "file": "src/agent_regression/harness.py",
+      "line": 410,
+      "status": "killed",
+      "tests_run": 30,
+      "returncode": 1
+    },
+    {
+      "id": "replay-completeness",
+      "file": "src/agent_regression/harness.py",
+      "line": 520,
+      "status": "killed",
+      "tests_run": 30,
+      "returncode": 1
+    },
+    {
+      "id": "metamorphic-run-ids",
+      "file": "src/agent_regression/harness.py",
+      "line": 440,
+      "status": "killed",
+      "tests_run": 30,
+      "returncode": 1
+    }
+  ]
+}
