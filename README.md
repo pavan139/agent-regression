@@ -1,5 +1,16 @@
 # Agent Regression
 
+<!-- at-a-glance -->
+[![ci](https://github.com/pavan139/agent-regression/actions/workflows/ci.yml/badge.svg)](https://github.com/pavan139/agent-regression/actions/workflows/ci.yml) ![license: MIT](https://img.shields.io/badge/license-MIT-blue)
+
+| | |
+| --- | --- |
+| **Problem** | Agent release decisions that only check the final answer miss wrong tools, repeated side effects and invented evidence. |
+| **Result** | Caught **128/128** injected faults across 8 fault types on a deterministic fixture agent; 21/21 baseline contracts pass. |
+| **Try it** | `pip install -e .` then `python -m agent_regression compare --baseline baselines/baseline.jsonl --candidate baselines/candidate-regression.jsonl --output results/comparison.json` |
+<!-- /at-a-glance -->
+
+
 A correct answer is insufficient when the agent used the wrong tool, repeated an effect, or invented its evidence. This suite grades the visible output and execution trace against independent arithmetic labels, then compares complete runs before making a release decision.
 
 ## Run a failing comparison first
