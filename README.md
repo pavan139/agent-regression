@@ -70,7 +70,7 @@ handbook/                          Replay contract, findings and results
 scripts/check_suite.py             Standalone package verification
 ```
 
-The [replay format](handbook/replay-format.md) and [validator findings](handbook/validator-findings.md) explain the edge cases. [Fault results](handbook/fault-detection-results.md) preserve selected source-fault probes without presenting them as whole-project mutation coverage.
+The [replay format](handbook/replay-format.md) and [validator findings](handbook/validator-findings.md) explain the edge cases. [Fault-probe results](baselines/review-fault-probes.json) preserve selected source-fault probes without presenting them as whole-project mutation coverage.
 
 ```bash
 python -m pip install -e . -r requirements-dev.txt
